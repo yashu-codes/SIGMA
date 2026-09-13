@@ -49,7 +49,7 @@ app.add_middleware(
 
 # Load AI model
 
-model = joblib.load("../ML engine/risk_model.pkl")
+model = joblib.load("risk_model.pkl")
 
 
 

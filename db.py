@@ -3,7 +3,7 @@ import mysql.connector
 connection = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="yashusql@cse16",
+    password="your_actual_password",
     database="mineguard_nexus"
 )
 

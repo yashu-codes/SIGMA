@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import sigmaLogin from "./sigma-login.png";
 import "./App.css";
 
 const API_URL = "http://127.0.0.1:8001";
@@ -419,7 +420,7 @@ const openSustainabilityPage = async () => {
       <div className="sigma-screen">
 
         <img
-          src="/sigma-login.png"
+    src={sigmaLogin}
           alt="SIGMA"
           className="sigma-image"
         />

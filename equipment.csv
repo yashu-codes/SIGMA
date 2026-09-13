@@ -1,0 +1,4 @@
+﻿equipment_id,mine_id,equipment_type,last_maintenance,next_maintenance,maintenance_delay_days,failure_count,condition
+EQ001,M001,Ventilation System,01-07-2026,01-08-2026,8,2,Needs Attention
+EQ002,M001,Conveyor,15-07-2026,15-08-2026,0,1,Good
+EQ003,M002,Ventilation System,10-07-2026,10-08-2026,0,0,Good

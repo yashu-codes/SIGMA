@@ -1,0 +1,5 @@
+﻿action_id,violation_id,mine_id,action,priority,assigned_to,date_assigned,deadline,completion_date,status
+A001,V001,M001,Repair ventilation system,Medium,Officer_01,02-06-2026,08-06-2026,09-06-2026,Pending
+A002,V002,M001,Inspect ventilation system,High,Officer_02,02-07-2026,08-07-2026,09-07-2026,Completed
+A003,V003,M001,Perform equipment maintenance,High,Officer_03,02-07-2026,15-07-2026,16-07-2026,Pending
+A004,V004,M001,Immediate ventilation corrective action,Critical,Officer_01,02-08-2026,08-08-2026,09-08-2026,Overdue

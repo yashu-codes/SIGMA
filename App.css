@@ -1,0 +1,2281 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   SIGMA LANDING
+   ========================= */
+
+.sigma-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+  overflow: hidden;
+}
+
+.sigma-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* =========================
+   INVISIBLE LOGIN LAYER
+   ========================= */
+
+.real-login-form {
+  position: absolute;
+
+  left: 60.6%;
+  top: 43%;
+
+  width: 22.5%;
+  height: 40%;
+
+  z-index: 10;
+}
+
+
+/* =========================
+   USERNAME
+   ========================= */
+
+.username-hitbox {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 17%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  padding: 0 15px 0 50px;
+
+  caret-color: #20baff;
+
+  z-index: 20;
+}
+
+
+/* =========================
+   PASSWORD
+   ========================= */
+
+.password-wrapper {
+  position: absolute;
+
+  left: 0;
+  top: 28%;
+
+  width: 100%;
+  height: 17%;
+}
+
+.password-hitbox {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  padding: 0 55px 8px 50px;
+line-height: normal;
+
+  caret-color: #20baff;
+
+  z-index: 20;
+  transform: translateY(-12px);
+}
+
+
+/* =========================
+   EYE BUTTON
+   ========================= */
+
+.eye-hitbox {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 55px;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+ background:transparent;
+
+  cursor: pointer;
+
+  z-index: 30;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+   ========================= */
+
+.login-hitbox {
+  position: absolute;
+
+  left: 0;
+  top: 55%;
+
+  width: 100%;
+  height: 18%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 30;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+   ========================= */
+
+.login-error {
+  position: absolute;
+
+  left: 0;
+  top: 80%;
+
+  width: 100%;
+
+  text-align: center;
+
+  color: #ff6b6b;
+
+  font-size: 13px;
+
+  pointer-events: none;
+
+  z-index: 40;
+}
+.clickable-card {
+  cursor: pointer;
+}
+
+.clickable-card:hover {
+  transform: translateY(-4px);
+}
+/* =========================================================
+   SIGMA COMMAND CENTER DASHBOARD
+   ========================================================= */
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+
+  overflow-y: auto;
+
+  background:
+    radial-gradient(
+      circle at 70% 10%,
+      rgba(0, 160, 255, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #02070d,
+      #06131e 50%,
+      #02070d
+    );
+
+  color: white;
+
+  padding: 35px 55px;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+   ========================================================= */
+
+.dashboard-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(0, 180, 255, 0.35);
+
+  padding-bottom: 25px;
+}
+
+
+.dashboard-logo {
+  font-size: 42px;
+
+  font-weight: 900;
+
+  letter-spacing: 10px;
+
+  color: #f3f9ff;
+
+  text-shadow:
+    0 0 10px rgba(0, 190, 255, 0.7),
+    0 0 30px rgba(0, 190, 255, 0.35);
+}
+
+
+.dashboard-subtitle {
+  margin-top: 7px;
+
+  color: #22c4ff;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logout-button {
+  border: 1px solid #12baff;
+
+  background: transparent;
+
+  color: #20c7ff;
+
+  padding: 12px 25px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.logout-button:hover {
+  background: #079ee0;
+
+  color: white;
+
+  box-shadow: 0 0 20px rgba(0, 190, 255, 0.5);
+}
+
+
+/* =========================================================
+   DASHBOARD CONTENT
+   ========================================================= */
+
+.dashboard-content {
+  padding-top: 45px;
+}
+
+
+.dashboard-welcome span {
+  color: #20c4ff;
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+}
+
+
+.dashboard-welcome h1 {
+  margin: 10px 0;
+
+  font-size: 40px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.dashboard-welcome p {
+  max-width: 700px;
+
+  color: #9eb7ca;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   DASHBOARD CARDS
+   ========================================================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  margin-top: 45px;
+}
+
+
+.dashboard-card {
+  position: relative;
+
+  min-height: 220px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(0, 190, 255, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8, 30, 46, 0.9),
+      rgba(3, 12, 21, 0.95)
+    );
+
+  box-shadow:
+    inset 0 0 30px rgba(0, 150, 255, 0.04),
+    0 0 20px rgba(0, 100, 160, 0.08);
+
+  transition: 0.25s;
+}
+
+
+.dashboard-card:hover {
+  border-color: #15bfff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 25px rgba(0, 180, 255, 0.18),
+    inset 0 0 30px rgba(0, 150, 255, 0.07);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.card-number {
+  color: #18c4ff;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+}
+
+
+.dashboard-card h2 {
+  margin-top: 20px;
+
+  font-size: 24px;
+
+  color: #ffffff;
+}
+
+
+.dashboard-card p {
+  color: #9eb7ca;
+
+  line-height: 1.6;
+
+  max-width: 500px;
+}
+
+
+.card-status {
+  position: absolute;
+
+  bottom: 25px;
+
+  color: #18c4ff;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   CLICKABLE CARD
+   ========================================================= */
+
+.clickable-card {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding: 25px;
+  }
+
+}
+/* =========================================================
+   RISK INTELLIGENCE
+   ========================================================= */
+
+.risk-page {
+  width: 100%;
+   height: 100vh;
+  min-height: 100vh;
+
+  overflow-y: auto;
+
+  background:
+    radial-gradient(
+      circle at 70% 0%,
+      rgba(0, 170, 255, 0.14),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #02070d,
+      #06131e 50%,
+      #02070d
+    );
+
+  color: white;
+
+  padding: 35px 55px;
+}
+
+
+.risk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid rgba(0, 180, 255, 0.35);
+}
+
+
+.risk-logo {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 9px;
+
+  color: #f3f9ff;
+
+  text-shadow:
+    0 0 10px rgba(0, 190, 255, 0.7),
+    0 0 30px rgba(0, 190, 255, 0.35);
+}
+
+
+.risk-subtitle {
+  margin-top: 7px;
+
+  color: #22c4ff;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+}
+
+
+.risk-header-actions {
+  display: flex;
+  gap: 15px;
+}
+
+
+.back-button {
+  border: 1px solid rgba(0, 190, 255, 0.5);
+
+  background: transparent;
+
+  color: #20c7ff;
+
+  padding: 12px 20px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+
+.back-button:hover {
+  background: rgba(0, 170, 255, 0.12);
+}
+
+
+.risk-content {
+  padding-top: 45px;
+}
+
+
+.risk-title span {
+  color: #20c4ff;
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+}
+
+
+.risk-title h1 {
+  margin: 10px 0;
+
+  font-size: 42px;
+
+  color: white;
+}
+
+
+.risk-title p {
+  color: #9eb7ca;
+
+  font-size: 16px;
+
+  max-width: 750px;
+}
+
+
+.risk-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  margin-top: 40px;
+}
+
+
+.risk-card {
+  padding: 28px;
+
+  border: 1px solid rgba(0, 190, 255, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(8, 30, 46, 0.95),
+      rgba(3, 12, 21, 0.98)
+    );
+
+  box-shadow:
+    inset 0 0 30px rgba(0, 150, 255, 0.04),
+    0 0 20px rgba(0, 100, 160, 0.08);
+}
+
+
+.risk-card-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+}
+
+
+.mine-id {
+  color: #20c4ff;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+
+.risk-card h2 {
+  margin-top: 10px;
+
+  font-size: 21px;
+}
+
+
+.risk-badge {
+  padding: 8px 15px;
+
+  border: 1px solid;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+.risk-badge.critical {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+
+.risk-badge.high {
+  color: #ffb347;
+  border-color: #ffb347;
+}
+
+
+.risk-badge.medium {
+  color: #ffd166;
+  border-color: #ffd166;
+}
+
+
+.risk-badge.low {
+  color: #55e6a5;
+  border-color: #55e6a5;
+}
+
+
+.confidence-section {
+  margin-top: 28px;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(0, 180, 255, 0.18);
+}
+
+
+.confidence-number {
+  font-size: 38px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.confidence-label {
+  margin-top: 4px;
+
+  color: #20c4ff;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+
+.risk-factors {
+  margin-top: 22px;
+}
+
+
+.risk-factors h3 {
+  color: #20c4ff;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+
+.factor-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-top: 15px;
+}
+
+
+.factor {
+  padding: 14px;
+
+  border: 1px solid rgba(0, 180, 255, 0.18);
+
+  background: rgba(0, 20, 35, 0.55);
+}
+
+
+.factor span {
+  display: block;
+
+  color: #8ea8ba;
+
+  font-size: 11px;
+}
+
+
+.factor strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color: white;
+
+  font-size: 18px;
+}
+
+
+.risk-message {
+  margin-top: 40px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(0, 190, 255, 0.3);
+
+  color: #20c4ff;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+}
+
+
+.risk-error {
+  margin-top: 40px;
+
+  padding: 25px;
+
+  border: 1px solid #ff6b6b;
+
+  color: #ff8585;
+}
+
+
+@media (max-width: 1000px) {
+
+  .risk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .factor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .risk-page {
+    padding: 25px;
+  }
+
+  .risk-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .risk-header-actions {
+    flex-direction: column;
+  }
+
+  .factor-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+.risk-content {
+  padding-bottom: 60px;
+}
+/* FORCE SIGMA LOGIN INPUTS TO BE TRANSPARENT */
+
+.sigma-screen .real-login-form input.username-hitbox,
+.sigma-screen .real-login-form input.password-hitbox {
+  position: absolute !important;
+
+  background: transparent !important;
+  background-color: transparent !important;
+
+  border: 0 !important;
+  border-color: transparent !important;
+
+  outline: 0 !important;
+
+  box-shadow: none !important;
+
+  color: #ffffff !important;
+
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Chrome autofill fix */
+.sigma-screen input:-webkit-autofill,
+.sigma-screen input:-webkit-autofill:hover,
+.sigma-screen input:-webkit-autofill:focus,
+.sigma-screen input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff !important;
+
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+
+  box-shadow: 0 0 0 1000px transparent inset !important;
+
+  background-color: transparent !important;
+
+  transition: background-color 9999s ease-out 0s !important;
+}
+
+/* =========================================================
+   AI GOVERNANCE ANALYSIS
+   ========================================================= */
+
+.ai-explanation-panel {
+  margin-top: 18px;
+  padding: 22px 24px;
+
+  border: 1px solid rgba(0, 190, 255, 0.45);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(5, 28, 43, 0.95),
+      rgba(2, 12, 21, 0.98)
+    );
+
+  box-shadow:
+    inset 0 0 25px rgba(0, 160, 255, 0.04),
+    0 0 18px rgba(0, 130, 200, 0.08);
+
+  color: #dcefff;
+}
+
+.explanation-title {
+  color: #20c7ff;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.explanation-risk {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 15px;
+  margin-bottom: 18px;
+
+  border-bottom: 1px solid rgba(0, 180, 255, 0.2);
+}
+
+.explanation-risk span,
+.explanation-drivers > span,
+.explanation-recommendation > span {
+  color: #7fa8c2;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.explanation-risk strong {
+  color: #ff5c5c;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.explanation-drivers {
+  margin-bottom: 20px;
+}
+
+.explanation-driver {
+  margin-top: 9px;
+
+  color: #d7e9f5;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.explanation-recommendation {
+  margin-top: 18px;
+  padding: 15px;
+
+  border-left: 2px solid #20c7ff;
+
+  background: rgba(0, 150, 220, 0.06);
+}
+
+.explanation-recommendation strong {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.explanation-error {
+  border-color: rgba(255, 80, 80, 0.5);
+  color: #ff7777;
+}
+/* =========================
+   WHAT-IF SIMULATOR
+   ========================= */
+
+.whatif-panel {
+  margin-top: 22px;
+  padding: 25px;
+  border: 1px solid rgba(0, 190, 255, 0.55);
+  background: rgba(3, 20, 32, 0.95);
+}
+
+.whatif-title {
+  color: #20c7ff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 22px;
+}
+
+.whatif-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.whatif-card {
+  padding: 18px;
+  border: 1px solid rgba(0, 190, 255, 0.3);
+  background: rgba(5, 28, 43, 0.8);
+}
+
+.whatif-card span {
+  display: block;
+  color: #8db5ca;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.whatif-card strong {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.whatif-recommendation {
+  margin-top: 18px;
+  padding: 18px;
+  border-left: 2px solid #20c7ff;
+  background: rgba(8, 35, 52, 0.8);
+}
+
+.whatif-recommendation span {
+  display: block;
+  color: #7fb3ca;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.whatif-recommendation strong {
+  color: #ffffff;
+  font-size: 15px;
+}
+.compliance-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compliance-stat span {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.compliance-stat strong {
+  font-size: 36px;
+  color: #00d9ff;
+}
+.compliance-section {
+  margin-top: 45px;
+  padding-bottom: 40px;
+}
+
+.compliance-section-header span {
+  color: #00d9ff;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.compliance-section-header h2 {
+  margin: 8px 0;
+  font-size: 28px;
+}
+
+.compliance-section-header p {
+  color: #9bb8c8;
+  margin-bottom: 25px;
+}
+
+.compliance-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 217, 255, 0.35);
+  background: rgba(2, 18, 28, 0.75);
+}
+
+.compliance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compliance-table th {
+  text-align: left;
+  padding: 16px;
+  color: #00d9ff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.3);
+}
+
+.compliance-table td {
+  padding: 16px;
+  color: #dcecf3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compliance-table tr:hover {
+  background: rgba(0, 217, 255, 0.05);
+}
+
+.severity-badge,
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* OPERATIONAL SUMMARY CARDS */
+
+.compliance-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-top: 35px;
+  margin-bottom: 70px;
+}
+
+.compliance-stat-card {
+  border: 1px solid #075b7a;
+  padding: 28px 30px;
+  min-height: 80px;
+  background: rgba(3, 18, 29, 0.45);
+}
+
+.compliance-stat-card span {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.compliance-stat-card strong {
+  display: block;
+  font-size: 32px;
+  color: #00d9ff;
+}
+/* ================================
+   SUSTAINABILITY INTELLIGENCE
+================================ */
+
+.risk-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin: 30px 0 55px;
+}
+
+.risk-summary-card {
+  border: 1px solid #075b78;
+  background: rgba(3, 22, 32, 0.65);
+  padding: 26px 30px;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.risk-summary-card span {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.risk-summary-card strong {
+  color: #00d9ff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.risk-section {
+  margin-top: 30px;
+}
+
+.risk-section-label {
+  color: #00d9ff;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.risk-section h2 {
+  color: #ffffff;
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.risk-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 28px;
+}
+
+.risk-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #075b78;
+  background: rgba(2, 18, 27, 0.65);
+}
+
+.risk-table th {
+  color: #00d9ff;
+  text-align: left;
+  padding: 18px;
+  border-bottom: 1px solid #075b78;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.risk-table td {
+  color: #ffffff;
+  padding: 18px;
+  border-bottom: 1px solid rgba(7, 91, 120, 0.45);
+  font-size: 16px;
+}
+
+.risk-table tr:last-child td {
+  border-bottom: none;
+}
+
+.status-badge {
+  display: inline-block;
+  border: 1px solid #087a9e;
+  padding: 5px 12px;
+  color: #ffffff;
+  font-size: 13px;
+  background: rgba(0, 70, 95, 0.25);
+}
+
+/* ============================================================
+   SIGMA AI GOVERNANCE ASSISTANT
+   ============================================================ */
+
+.ai-assistant-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 0 70px;
+}
+
+.ai-assistant-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.ai-assistant-description {
+  color: #8fb6d8;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.ai-assistant-card {
+  border: 1px solid rgba(0, 180, 255, 0.35);
+  background: rgba(3, 17, 29, 0.85);
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 30px rgba(0, 150, 255, 0.06);
+}
+
+.ai-label {
+  display: block;
+  color: #00c8ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.ai-mine-select {
+  width: 100%;
+  max-width: 500px;
+  height: 48px;
+  padding: 0 14px;
+  margin-bottom: 28px;
+  background: #071827;
+  color: #ffffff;
+  border: 1px solid rgba(0, 180, 255, 0.45);
+  outline: none;
+  font-size: 15px;
+}
+
+.ai-mine-select:focus {
+  border-color: #00c8ff;
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.15);
+}
+
+.ai-question-input {
+  width: 100%;
+  min-height: 120px;
+  box-sizing: border-box;
+  padding: 15px;
+  resize: vertical;
+  background: #071827;
+  color: #ffffff;
+  border: 1px solid rgba(0, 180, 255, 0.45);
+  outline: none;
+  font-family: inherit;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.ai-question-input::placeholder {
+  color: #6d8ca6;
+}
+
+.ai-question-input:focus {
+  border-color: #00c8ff;
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.15);
+}
+
+.ai-ask-button {
+  padding: 13px 25px;
+  background: transparent;
+  color: #00c8ff;
+  border: 1px solid #00c8ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ai-ask-button:hover {
+  background: rgba(0, 200, 255, 0.10);
+  box-shadow: 0 0 18px rgba(0, 200, 255, 0.15);
+}
+
+.ai-ask-button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.ai-error {
+  margin-top: 18px;
+  padding: 12px 15px;
+  border-left: 3px solid #ff4d6d;
+  background: rgba(255, 77, 109, 0.08);
+  color: #ff8da1;
+}
+
+.ai-answer-card {
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid rgba(0, 200, 255, 0.35);
+  background: rgba(0, 200, 255, 0.035);
+}
+
+.ai-answer-heading {
+  color: #00c8ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.ai-answer-mine {
+  color: #7fa7c4;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.ai-answer-text {
+  color: #e7f5ff;
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.ai-suggestions {
+  border-top: 1px solid rgba(0, 180, 255, 0.20);
+  padding-top: 22px;
+}
+
+.ai-suggestions-title {
+  color: #00c8ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.ai-suggestions button {
+  margin: 0 10px 10px 0;
+  padding: 10px 15px;
+  background: transparent;
+  color: #9fc4df;
+  border: 1px solid rgba(0, 180, 255, 0.28);
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.ai-suggestions button:hover {
+  color: #ffffff;
+  border-color: #00c8ff;
+  background: rgba(0, 200, 255, 0.06);
+}
+/* ============================================================
+   SIGMA FLOATING AI ASSISTANT
+   ============================================================ */
+
+.sigma-ai-floating-button {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 9999;
+
+  height: 58px;
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(4, 20, 32, 0.96);
+  color: #00c8ff;
+
+  border: 1px solid #00c8ff;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 20px rgba(0, 200, 255, 0.15);
+
+  transition: all 0.25s ease;
+}
+
+.sigma-ai-floating-button:hover {
+  background: rgba(0, 200, 255, 0.10);
+
+  box-shadow:
+    0 0 30px rgba(0, 200, 255, 0.30);
+
+  transform: translateY(-3px);
+}
+
+.sigma-ai-floating-button span {
+  letter-spacing: 1.5px;
+}
+
+
+/* CHAT WINDOW */
+
+.sigma-ai-chat {
+  position: fixed;
+
+  right: 28px;
+  bottom: 100px;
+
+  width: 390px;
+  height: 570px;
+
+  z-index: 10000;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(5, 24, 38, 0.98),
+      rgba(2, 12, 22, 0.98)
+    );
+
+  border: 1px solid rgba(0, 200, 255, 0.45);
+
+  box-shadow:
+    0 0 45px rgba(0, 150, 255, 0.18);
+
+  overflow: hidden;
+}
+
+
+/* HEADER */
+
+.sigma-ai-chat-header {
+  min-height: 72px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid rgba(0, 200, 255, 0.20);
+
+  background:
+    rgba(0, 200, 255, 0.035);
+}
+
+.sigma-ai-chat-title {
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.sigma-ai-chat-subtitle {
+  margin-top: 5px;
+
+  color: #00c8ff;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.sigma-ai-close {
+  width: 32px;
+  height: 32px;
+
+  background: transparent;
+
+  border: 1px solid rgba(0, 200, 255, 0.25);
+
+  color: #8fb6d8;
+
+  font-size: 21px;
+
+  cursor: pointer;
+}
+
+.sigma-ai-close:hover {
+  color: #ffffff;
+  border-color: #00c8ff;
+}
+
+
+/* BODY */
+
+.sigma-ai-chat-body {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 20px;
+}
+
+
+/* WELCOME */
+
+.sigma-ai-welcome {
+  padding: 20px 5px 25px;
+}
+
+.sigma-ai-avatar {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.sigma-ai-welcome h3 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 21px;
+}
+
+.sigma-ai-welcome p {
+  margin: 0;
+
+  color: #8fb6d8;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* SUGGESTIONS */
+
+.sigma-ai-section-title {
+  margin-bottom: 10px;
+
+  color: #00c8ff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.sigma-ai-suggestions button {
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 8px;
+
+  padding: 10px 12px;
+
+  text-align: left;
+
+  background: rgba(0, 200, 255, 0.035);
+
+  border: 1px solid rgba(0, 200, 255, 0.20);
+
+  color: #b8d5e8;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.sigma-ai-suggestions button:hover {
+  color: #ffffff;
+
+  border-color: #00c8ff;
+
+  background: rgba(0, 200, 255, 0.08);
+}
+
+
+/* LOADING */
+
+.sigma-ai-loading {
+  margin-top: 18px;
+
+  color: #00c8ff;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  animation: sigmaPulse 1.3s infinite;
+}
+
+@keyframes sigmaPulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* ANSWER */
+
+.sigma-ai-answer {
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border-left:
+    2px solid #00c8ff;
+
+  background:
+    rgba(0, 200, 255, 0.045);
+}
+
+.sigma-ai-message-label {
+  margin-bottom: 8px;
+
+  color: #00c8ff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.sigma-ai-message {
+  color: #d9edf9;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  white-space: pre-wrap;
+}
+
+.sigma-ai-error {
+  margin-top: 15px;
+
+  color: #ff8da1;
+
+  font-size: 12px;
+}
+
+
+/* INPUT AREA */
+
+.sigma-ai-input-area {
+  padding: 12px;
+
+  border-top:
+    1px solid rgba(0, 200, 255, 0.20);
+
+  background:
+    rgba(2, 12, 22, 0.98);
+}
+
+.sigma-ai-mine {
+  width: 100%;
+
+  height: 32px;
+
+  margin-bottom: 8px;
+
+  padding: 0 8px;
+
+  background: #071827;
+
+  color: #9fc4df;
+
+  border:
+    1px solid rgba(0, 200, 255, 0.25);
+
+  outline: none;
+
+  font-size: 11px;
+}
+
+.sigma-ai-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.sigma-ai-input-row input {
+  flex: 1;
+
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  background: #071827;
+
+  color: #ffffff;
+
+  border:
+    1px solid rgba(0, 200, 255, 0.30);
+
+  outline: none;
+
+  font-size: 13px;
+}
+
+.sigma-ai-input-row input::placeholder {
+  color: #64849d;
+}
+
+.sigma-ai-input-row input:focus {
+  border-color: #00c8ff;
+}
+
+.sigma-ai-send {
+  width: 48px;
+
+  background: transparent;
+
+  color: #00c8ff;
+
+  border:
+    1px solid #00c8ff;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.sigma-ai-send:hover {
+  background: rgba(0, 200, 255, 0.10);
+}
+
+.sigma-ai-send:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* =========================================================
+   SIGMA AI FULLSCREEN
+   ========================================================= */
+
+.sigma-ai-fullscreen-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #020b12;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sigma-ai-fullscreen-header {
+  height: 90px;
+  padding: 0 40px;
+  border-bottom: 1px solid #06445d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sigma-ai-fullscreen-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sigma-ai-fullscreen-subtitle {
+  margin-top: 6px;
+  color: #00cfff;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.sigma-ai-fullscreen-close {
+  width: 46px;
+  height: 46px;
+  background: transparent;
+  border: 1px solid #00bfff;
+  color: #00cfff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.sigma-ai-fullscreen-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 60px;
+}
+
+.sigma-ai-fullscreen-welcome {
+  max-width: 800px;
+}
+
+.sigma-ai-fullscreen-welcome h1 {
+  font-size: 42px;
+  margin: 20px 0 12px;
+}
+
+.sigma-ai-fullscreen-welcome p {
+  color: #9fc4d5;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.sigma-ai-fullscreen-answer {
+  margin-top: 40px;
+  max-width: 1000px;
+  padding: 28px;
+  border: 1px solid #07516b;
+  background: #04131d;
+  color: #d9f5ff;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.sigma-ai-fullscreen-input {
+  padding: 20px 40px;
+  border-top: 1px solid #06445d;
+  display: flex;
+  gap: 12px;
+}
+
+.sigma-ai-fullscreen-input input {
+  flex: 1;
+  height: 55px;
+  background: #04131d;
+  border: 1px solid #07516b;
+  color: white;
+  padding: 0 18px;
+  font-size: 16px;
+  outline: none;
+}
+
+.sigma-ai-fullscreen-input button {
+  width: 65px;
+  background: transparent;
+  border: 1px solid #00bfff;
+  color: #00cfff;
+  font-size: 24px;
+  cursor: pointer;
+}
+.sigma-ai-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sigma-ai-message {
+  max-width: 88%;
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 200, 255, 0.25);
+}
+
+.sigma-ai-message.user {
+  align-self: flex-end;
+  background: rgba(0, 150, 220, 0.10);
+}
+
+.sigma-ai-message.assistant {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.sigma-ai-message-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #00d9ff;
+  margin-bottom: 7px;
+  font-weight: 700;
+}
+
+.sigma-ai-message-content {
+  color: #d8edf7;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.sigma-ai-typing {
+  display: flex;
+  gap: 5px;
+}
+
+.sigma-ai-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d9ff;
+  animation: sigmaTyping 1s infinite;
+}
+
+@keyframes sigmaTyping {
+  0%, 60%, 100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.sigma-ai-history-button {
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  color: #00d9ff;
+  text-align: left;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.sigma-ai-history {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 270px;
+  height: calc(100% - 70px);
+  background: #06151e;
+  border-right: 1px solid rgba(0, 200, 255, 0.25);
+  z-index: 20;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.sigma-ai-history-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #00d9ff;
+  margin-bottom: 15px;
+}
+
+.sigma-ai-history-item {
+  position: relative;
+  padding: 13px 35px 13px 12px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(0, 200, 255, 0.15);
+  cursor: pointer;
+}
+
+.sigma-ai-history-item:hover {
+  background: rgba(0, 200, 255, 0.08);
+}
+
+.sigma-ai-history-item-title {
+  color: #d8edf7;
+  font-size: 13px;
+}
+
+.sigma-ai-history-item-date {
+  margin-top: 5px;
+  color: #6d8997;
+  font-size: 10px;
+}
+
+.sigma-ai-history-delete {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border: 0;
+  background: transparent;
+  color: #718995;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.sigma-ai-history-delete:hover {
+  color: #ff6b6b;
+}
+
+.sigma-ai-new-chat {
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  background: transparent;
+  color: #00d9ff;
+  padding: 6px 10px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+/* =========================================
+   SIGMA AI FULLSCREEN CONVERSATION
+   ========================================= */
+
+.sigma-ai-fullscreen-messages {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 40px 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.sigma-ai-fullscreen-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+}
+
+.sigma-ai-fullscreen-message.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.sigma-ai-fullscreen-message.assistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.sigma-ai-fullscreen-message-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+  color: #00d9ff;
+}
+
+.sigma-ai-fullscreen-message-content {
+  padding: 16px 20px;
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  background: rgba(0, 25, 38, 0.75);
+  color: #dcefff;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.sigma-ai-fullscreen-message.user
+.sigma-ai-fullscreen-message-content {
+  background: rgba(0, 125, 170, 0.18);
+  border-color: rgba(0, 210, 255, 0.45);
+}
+
+/* ============================================================
+   SIGMA CHAT HISTORY / CHATGPT-STYLE SIDEBAR
+   ============================================================ */
+.sigma-ai-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sigma-ai-history-toggle {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid rgba(0, 200, 255, 0.25);
+  color: #8fb6d8;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.sigma-ai-history-toggle:hover {
+  color: #ffffff;
+  border-color: #00c8ff;
+  background: rgba(0, 200, 255, 0.08);
+}
+
+.sigma-ai-history {
+  box-sizing: border-box;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 285px;
+  height: calc(100% - 72px);
+  padding: 14px;
+  background: #06151e;
+  border-right: 1px solid rgba(0, 200, 255, 0.25);
+  z-index: 50;
+  overflow-y: auto;
+  box-shadow: 12px 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.sigma-ai-history-fullscreen {
+  top: 90px;
+  height: calc(100% - 90px);
+}
+
+.sigma-ai-new-chat {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 22px;
+  background: rgba(0, 200, 255, 0.06);
+  border: 1px solid rgba(0, 200, 255, 0.35);
+  color: #00d9ff;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.sigma-ai-new-chat:hover,
+.sigma-ai-new-chat-bottom:hover,
+.sigma-ai-new-chat-fullscreen:hover {
+  background: rgba(0, 200, 255, 0.12);
+  border-color: #00d9ff;
+}
+
+.sigma-ai-history-title {
+  color: #6f9bb3;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.sigma-ai-history-empty {
+  padding: 12px 4px;
+  color: #6d8997;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.sigma-ai-history-item {
+  position: relative;
+  padding: 12px 30px 11px 12px;
+  margin-bottom: 7px;
+  border: 1px solid rgba(0, 200, 255, 0.12);
+  background: rgba(255, 255, 255, 0.015);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.sigma-ai-history-item:hover,
+.sigma-ai-history-item.active {
+  background: rgba(0, 200, 255, 0.08);
+  border-color: rgba(0, 200, 255, 0.35);
+}
+
+.sigma-ai-history-item-title {
+  color: #d8edf7;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sigma-ai-history-item-date {
+  margin-top: 5px;
+  color: #668493;
+  font-size: 9px;
+}
+
+.sigma-ai-history-delete {
+  position: absolute;
+  right: 6px;
+  top: 7px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  background: transparent;
+  color: #718995;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sigma-ai-history-delete:hover {
+  color: #ff6b6b;
+}
+
+.sigma-ai-new-chat-bottom {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 7px 10px;
+  background: transparent;
+  border: 1px solid rgba(0, 200, 255, 0.18);
+  color: #79a9bf;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.sigma-ai-fullscreen-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sigma-ai-new-chat-fullscreen {
+  height: 55px;
+  padding: 0 16px;
+  background: transparent;
+  border: 1px solid #07516b;
+  color: #00cfff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .sigma-ai-history {
+    width: 245px;
+  }
+
+  .sigma-ai-new-chat-fullscreen {
+    display: none;
+  }
+}
+/* WHAT-IF SIMULATOR - FINAL POLISH */
+.whatif-card {
+  padding: 18px;
+  min-height: 145px;
+  box-sizing: border-box;
+}
+
+.whatif-card span {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.whatif-card strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.whatif-card small {
+  display: block;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 3px;
+}
+
+.whatif-recommendation span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.whatif-recommendation strong {
+  display: block;
+  line-height: 1.5;
+}

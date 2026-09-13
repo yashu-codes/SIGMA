@@ -1,0 +1,5 @@
+﻿Violations_id,Mine_id,inspection_id,category,severity,regulation,date_reported,corrective_action_required,deadline,status
+V001,M001,INS001,Ventilation,Medium,REG-001,01-08-2026,Yes,08-06-2026,Open
+V002,M001,INS002,Ventilation,High,REG-001,01-07-2026,Yes,08-07-2026,closed
+V003,M001,INS002,Equipment,High,REG-002,01-07-2026,Yes,15-07-2026,Open
+V004,M001,INS003,Ventilation,Critical,REG-001,01-08-2026,Yes,08-08-2026,Overdue

@@ -1,0 +1,4 @@
+﻿contractor_id,mine_id,contractor_name,work_type,workers,previous_violations,overdue_actions,compliance_score,status
+C001,M001,Demo Contractor,Mining Operations,150,4,2,68,Active
+C002,M001,Demo Contractor,Equipment Maintenance,80,1,1,91,Active
+C003,M002,Demo Contractor,Mining Operations,120,0,0,95,Active

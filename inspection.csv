@@ -1,0 +1,6 @@
+﻿Inspection_id,Mine_id,Inspection_date,Inspection_type,Inspector,"Safety_observations,",Violations_found,Severity,Inspection_Score
+INS001,M001,01-08-2026,Safety,Inspector_01,3,2,High,62
+INS002,M001,01-07-2026,Safety,Inspector_02,5,3,Medium,78
+INS003,M001,01-08-2026,Safety,Inspector_01,6,4,High,55
+INS004,M002,05-06-2026,Environment,Inspector_03,1,1,Low,91
+INS005,M002,10-07-2026,Safety,Inspector_02,2,1,Medium,82

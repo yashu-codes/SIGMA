@@ -1,0 +1,4 @@
+﻿Mine_id,Mine_name,State,District,Latitude,Longitude,Mine_type,Annual_production,Workers,Contractors,Status
+M001, Demo Mine Alpha,Telangana,District A,17.5,80.6,Open cast,"5,00,000",1200,8,Active
+M002,Demo Mine Beta,Telangana,District  B,17.8,80.4,Underground,"3,50,000",900,6,Active
+M003,Demo Mine Gamma,Odisha,District C,20.3,85.8,Open cast,"7,00,000",1500,10,Active

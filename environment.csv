@@ -1,0 +1,4 @@
+﻿record_id,mine_id,date,dust_level,air_quality,water_ph,noise_level,environmental_violation
+ENV001,M001,01-08-2026,72,68,7.2,81,No
+ENV002,M001,08-08-2026,86,55,6.8,89,Yes
+ENV003,M002,01-08-2026,45,88,7.4,65,No

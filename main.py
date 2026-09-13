@@ -28,13 +28,11 @@ app.add_middleware(
     CORSMiddleware,
 
     allow_origins=[
-
-        "http://localhost:5173",
-
-        "http://localhost:5174",
-           
-          "http://localhost:5175",
-
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    "https://sigma-mineguard-nexus-theta.vercel.app",
+]
     ],
 
     allow_credentials=True,
@@ -78,17 +76,12 @@ FEATURES = [
 
 
 def get_connection():
-
     return mysql.connector.connect(
-
-        host="localhost",
-
-        user="root",
-
-        password="your_actual_password",
-
-        database="mineguard_nexus"
-
+        host=os.getenv("MYSQLHOST"),
+        port=int(os.getenv("MYSQLPORT", "3306")),
+        user=os.getenv("MYSQLUSER"),
+        password=os.getenv("MYSQLPASSWORD"),
+        database=os.getenv("MYSQLDATABASE")
     )
 
 

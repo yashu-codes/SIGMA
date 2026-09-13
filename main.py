@@ -85,7 +85,7 @@ def get_connection():
 
         user="root",
 
-        password="yashusql@cse16",
+        password="your_actual_password",
 
         database="mineguard_nexus"
 
